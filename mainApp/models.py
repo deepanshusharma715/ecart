@@ -88,7 +88,7 @@ class Checkout(models.Model):
     shipping=models.IntegerField()
     final=models.IntegerField()
     rppid=models.CharField(max_length=30,default="")
-    date=models.DateTimeField(auto_now=True)
+    date=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return str(self.id)+" / "+self.buyer.username
